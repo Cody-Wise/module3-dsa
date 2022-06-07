@@ -11,8 +11,8 @@ class Stack {
     this.#list.push(item);
   }
 
-  pop(item) {
-    this.#list.pop(item);
+  pop() {
+    this.#list.pop();
   }
 
   peek() {
@@ -20,6 +20,30 @@ class Stack {
   }
 }
 
-class Queue {}
+class Queue {
+  #list = [];
+  construction(initialValue) {
+    if (initialValue) {
+      this.#list = initialValue;
+    }
+  }
+  enqueue(item) {
+    this.#list.push(item);
+  }
+
+  dequeue() {
+    const listReturn = this.#list[0];
+    this.#list.unshift();
+    return listReturn;
+  }
+
+  hasNext() {
+    if (this.#list.length > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
 
 module.exports = { Stack, Queue };
