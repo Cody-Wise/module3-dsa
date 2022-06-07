@@ -1,16 +1,21 @@
 const { Stack, Queue } = require('./index.js');
 
 describe('Stack Class', () => {
-  it('.push(item) should add a new item to the stack, and .peek() returns the top (last) item in the stack', () => {
+  it('.push(item) adds a new item to the stack, and .peek() returns the top (last) item in the stack', () => {
     const stack = new Stack();
     stack.push(1);
     expect(stack.peek()).toEqual(1);
   });
 
-  it('.pop() should remove the top (last) item in the stack', () => {
+  it('.pop() removes the top (last) item in the stack', () => {
     const stack = new Stack([1, 2, 3]);
     stack.pop();
     expect(stack.peek()).toEqual(2);
+  });
+
+  it('.pop() returns the top (last) item in the stack', () => {
+    const stack = new Stack([1, 2, 3]);
+    expect(stack.pop()).toEqual(3);
   });
 
   // add more tests here...

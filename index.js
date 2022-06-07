@@ -12,7 +12,7 @@ class Stack {
   }
 
   pop() {
-    this.#list.pop();
+    return this.#list.pop();
   }
 
   peek() {
