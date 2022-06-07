@@ -32,9 +32,7 @@ class Queue {
   }
 
   dequeue() {
-    const listReturn = this.#list[0];
-    this.#list.unshift();
-    return listReturn;
+    return this.#list.shift();
   }
 
   hasNext() {
