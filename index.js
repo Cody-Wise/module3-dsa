@@ -55,7 +55,7 @@ class Queue {
 function reverseArray(array) {
   const reversedStack = new Stack();
   for (let i = array.length - 1; i >= 0; i--) {
-    reversedStack.push(array.pop());
+    reversedStack.push(array[i]);
   }
   return reversedStack;
 }
