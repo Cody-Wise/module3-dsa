@@ -1,4 +1,4 @@
-const { Stack, Queue } = require('./index.js');
+const { Stack, Queue, reverseArray } = require('./index.js');
 
 describe('Stack Class', () => {
   it('.push(item) adds a new item to the stack, and .peek() returns the top (last) item in the stack', () => {
@@ -45,5 +45,13 @@ describe('Queue Class', () => {
     queue.dequeue();
     expect(queue.hasNext()).toEqual(false);
   });
+  // add more tests here...
+});
+
+describe('Reverse array with Stack', () => {
+  it('reverseArray() reverses an array using a Stack class', () => {
+    expect(reverseArray([12, 3, 5, 7]).listAsArray).toEqual([7, 5, 3, 12]);
+  });
+
   // add more tests here...
 });
