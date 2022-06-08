@@ -18,6 +18,14 @@ class Stack {
   peek() {
     return this.#list[this.#list.length - 1];
   }
+
+  get readableList() {
+    return this.#list.toString();
+  }
+
+  get listAsArray() {
+    return this.#list;
+  }
 }
 
 class Queue {
@@ -44,4 +52,12 @@ class Queue {
   }
 }
 
-module.exports = { Stack, Queue };
+function reverseArray(array) {
+  const reversedStack = new Stack();
+  for (let i = array.length - 1; i >= 0; i--) {
+    reversedStack.push(array.pop());
+  }
+  return reversedStack;
+}
+
+module.exports = { Stack, Queue, reverseArray };
